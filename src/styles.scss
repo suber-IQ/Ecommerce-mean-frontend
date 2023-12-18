@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root{
+      --body-bg-color: #0b0b0b;
+      --white-color: #fff;
+      --shadow-color: #000000 0px 5px 15px;
+}
+
+body{
+      margin: 0;
+      font-family: 'Lato', sans-serif;
+      background: var(--body-bg-color);
+      color: var(--white-color);
+}
+.box{
+      box-shadow: var(--shadow-color);
+}
+.hideScrollbar::-webkit-scrollbar{
+      display: none;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.mat-menu-panel.indigo-menu {
+      background-color: indigo;
+      color: white; /* Text color */
+}

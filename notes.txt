@@ -1,0 +1,4 @@
+# Create a component shortcut
+    ng g c home
+
+# navbar color is :- #210038
