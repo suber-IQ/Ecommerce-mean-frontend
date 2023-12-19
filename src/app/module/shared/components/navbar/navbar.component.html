@@ -1,19 +1,19 @@
-<div class="fixed top-0 z-50 right-0 left-0 bg-[#210038] text-[#f2e0ff] px-5 lg:px-20">
-      <div class="flex h-16 items-center justify-between">
+<div class="fixed top-0 z-50 right-0 left-0 bg-[#210038] text-[#f2e0ff]">
+      <div class="flex h-16 items-center justify-between px-5 lg:px-20">
 
           <div class="flex items-center">
              <div class="mr-5">
-                  <img class="w-8" [src]="logo1" alt="Code With Suber-IQ">
+                  <img class="w-9" [src]="logo1" alt="Code With Suber-IQ">
                </div>
-                     <div class="flex space-x-4 items-center">
+                     <div class="flex space-x-4 items-center text-lg">
                           <a routerLink="/" class="text-[#f2e0ff]">
                             Shop with Suber-IQ
                           </a>
                           <div>
-                            <button (click)="openNavbarContent('men')" mat-button color="secondary">Men</button>
+                            <button class="open-button" (click)="openNavbarContent('men')" mat-button color="secondary">Men</button>
                           </div>
                           <div>
-                            <button (click)="openNavbarContent('women')" mat-button color="secondary">Women</button>
+                            <button class="open-button" (click)="openNavbarContent('women')" mat-button color="secondary">Women</button>
                           </div>
                      </div>
           </div>
@@ -21,8 +21,8 @@
               <button (click)="navigateTo('cart')" mat-icon-button>
                   <mat-icon>shopping_cart</mat-icon>
               </button>
-              <button class="bg-[#390061] py-1 px-2 hover:bg-indigo-400 hover:text-indigo-200 transition-all duration-700 rounded-sm text-[#dfb3ff]">Log In</button>
-              <div class="ml-3 flex items-center">
+              <button *ngIf="false" class="bg-[#390061] py-1 px-2 hover:bg-indigo-400 hover:text-indigo-200 transition-all duration-700 rounded-sm text-[#dfb3ff]">Log In</button>
+              <div *ngIf="true" class="ml-3 flex items-center">
                   <div class="flex items-center space-x-5">
                       <span class="font-bold">Suber-IQ</span>
                       <button mat-button [matMenuTriggerFor]="profileMenu">
@@ -37,4 +37,8 @@
               </div>
           </div>
       </div>
+      <div *ngIf="isNavbarContentOpen" class="modal-container absolute left-0 right-0">
+        <app-nav-content [selectedSection]="currentSection" />
+      </div>
 </div>
+
